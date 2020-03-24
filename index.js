@@ -3,7 +3,7 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
 function strip(bandName) {
-	return bandName.replace(/^(a |the |an )/i, '').trim();
+	return bandName.replace(/^(a |the |an )/i, '').trim(); //without the spaces in capturing group it doesn't work
 }
 
 //this will be written in one line
@@ -20,6 +20,5 @@ document.querySelector('.bands').innerHTML =
 		.map(band => `<li>${band}</li>`)
 		.join('');
 
-//if we put to innerHTML something other than a string, a method 'toString()' will automatically be called on the thing passed
-//so if we pass an array of bands, this array will be converted to one big string with bands seperated with comma
+//so if we pass an array of bands, this array will be converted to one big string with bands seperated with commas
 //to avoid that (commas would be rendered in the list), we use join(''), which converts array to one big string
