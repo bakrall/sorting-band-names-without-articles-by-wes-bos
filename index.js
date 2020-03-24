@@ -20,5 +20,6 @@ document.querySelector('.bands').innerHTML =
 		.map(band => `<li>${band}</li>`)
 		.join('');
 
+//if we pass to innerHTML something other than a string, a method 'toString()' will automatically be called on the thing passed
 //so if we pass an array of bands, this array will be converted to one big string with bands seperated with commas
 //to avoid that (commas would be rendered in the list), we use join(''), which converts array to one big string
